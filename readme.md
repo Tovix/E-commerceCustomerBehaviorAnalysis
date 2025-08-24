@@ -1,6 +1,7 @@
 # E-commerce Customer Behavior Analysis
 
 ## Table of Contents
+
 - [Project Overview](#project-overview)
 - [Dataset Information](#dataset-information)
 - [Project Structure](#project-structure)
@@ -13,6 +14,102 @@
 - [Installation & Setup](#installation--setup)
 - [Timeline](#timeline)
 
+## Business Context & Stakeholder Requirements
+
+> **Note:** The following business scenario and stakeholder interactions are AI-generated for training and portfolio development purposes. This simulated business context provides realistic practice in stakeholder communication and business requirement translation - essential skills for data science professionals.
+
+### Project Stakeholder: Marcus Chen - CEO & Founder, TechMart E-commerce
+
+**Company Background:**
+TechMart is a growing e-commerce platform processing millions of transactions monthly with current annual revenue of $12 million. The company has experienced significant growth but lacks data-driven insights for strategic decision-making.
+
+### Primary Business Objective
+
+**Target:** Increase annual revenue by 25% ($3M growth from $12M to $15M) within 12 months without proportionally increasing marketing spend.
+
+**Core Challenge:** Current customer acquisition cost has increased 40% while average order value remained flat, requiring optimization of existing customer base rather than expanded acquisition.
+
+### Stakeholder Requirements & Priorities
+
+#### Priority 1: Identify "Golden Customers"
+
+**Business Need:** Understand who the most valuable customers are to focus marketing efforts effectively.
+
+**Specific Requirements:**
+
+- Customer segmentation based on profit contribution (not just revenue)
+- Customer Lifetime Value calculations for each segment
+- Characteristics and behavioral patterns of high-value customers
+- Targeting strategy for acquiring similar customers
+
+**Success Metrics:**
+
+- Identification of top 20% customers contributing 80% of profit
+- Clear customer segment profiles with actionable characteristics
+- ROI projections for targeted marketing campaigns
+
+#### Priority 2: Reduce Customer Churn ("Stop the Bleeding")
+
+**Business Need:** Address the issue of one-time buyers who never return to the platform.
+
+**Specific Requirements:**
+
+- Analysis of customer retention patterns by segment
+- Identification of "bargain hunters" vs "potential loyalists"
+- Category-specific retention strategies
+- Cost-effective retention recommendations
+
+**Success Metrics:**
+
+- Churn rate analysis by customer segment and product category
+- Clear strategy on which customers to invest in retaining vs letting go
+- ROI analysis of retention campaigns
+
+#### Priority 3: Maximize Transaction Value (Cross-selling)
+
+**Business Need:** Increase average order value through strategic product recommendations.
+
+**Specific Requirements:**
+
+- Product association analysis for cross-selling opportunities
+- Focus on high-margin accessory and ecosystem product recommendations
+- Implementation-ready recommendation rules
+- Revenue impact projections
+
+**Success Metrics:**
+
+- Potential revenue increase: $600K annually from optimized cross-selling
+- Accessory attachment rate improvements
+- Average order value increases by product category
+
+### Project Timeline & Check-ins
+
+**Week 2 Check-in:**
+
+- Initial data exploration findings
+- Preliminary customer segment identification
+- Early insights on churn patterns and cross-selling opportunities
+
+**Week 4 Progress Review:**
+
+- Complete customer segmentation with CLV calculations
+- Detailed retention strategy recommendations
+- Cross-selling rules with revenue projections
+
+**Week 6 Business Case Presentation:**
+
+- Final recommendations with implementation roadmap
+- ROI projections and business impact analysis
+- Technical implementation requirements for marketing and development teams
+
+### Analytical Plan Framework
+
+Based on stakeholder requirements, the analytical approach focuses on three strategic areas:
+
+1. **Customer Value Optimization:** RFM+ analysis incorporating profit margins, not just revenue
+2. **Strategic Churn Management:** Data-driven decisions on retention investment
+3. **Revenue Maximization:** Market basket analysis for ecosystem and accessory cross-selling
+
 ## Project Overview
 
 This end-to-end data science project analyzes customer behavior patterns in a large-scale e-commerce platform to uncover actionable insights for business growth. The project demonstrates comprehensive data science skills including data wrangling, statistical analysis, machine learning, and business intelligence reporting.
@@ -22,13 +119,15 @@ This end-to-end data science project analyzes customer behavior patterns in a la
 ## Dataset Information
 
 **Primary Dataset**: E-commerce Events History Dataset
+
 - **Source**: Kaggle - "eCommerce behavior data from multi-category store"
-- **Direct Link**: https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store
+- **Direct Link**: <https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store>
 - **Size**: 285 million users' events (November 2019 - April 2020)
 - **Format**: Multiple CSV files with transaction-level behavioral data
 - **Data Volume**: Approximately 30GB of raw data across multiple monthly files
 
 ### Dataset Description
+
 This dataset contains e-commerce behavioral events from a large multi-category online store. The data represents user interactions including product views, cart additions, and purchases. Each row in the dataset represents a single user event (page view, add to cart, purchase) with associated metadata about the user, product, and session context.
 
 ### Column Descriptions
@@ -46,12 +145,14 @@ This dataset contains e-commerce behavioral events from a large multi-category o
 | `user_session` | String | Unique session identifier | a23f5204-c3a6-4b23-8d2c-b05b68e5dc4f |
 
 ### Data Quality Notes
+
 - **Missing Values**: Significant missing data in `category_code`, `brand`, and `user_session` fields
 - **Data Types**: Mixed categorical and numerical features requiring preprocessing
 - **Scale**: Large dataset requiring efficient processing techniques
 - **Time Span**: 6 months of data providing seasonal variation analysis opportunities
 
 **Dataset Characteristics**:
+
 - Real-world e-commerce transaction data
 - Multiple data quality issues (missing values, duplicates, inconsistencies)
 - Large volume suitable for big data processing techniques
@@ -107,6 +208,7 @@ ecommerce-analysis/
 ## Section 1: Data Cleaning & Wrangling
 
 ### Objectives
+
 Transform raw, messy e-commerce data into analysis-ready format while handling data quality issues and creating meaningful features.
 
 ### Task 1.1: Data Quality Assessment
@@ -211,6 +313,7 @@ Transform raw, messy e-commerce data into analysis-ready format while handling d
 ### 2.2 SQL Analysis
 
 #### Objectives
+
 Demonstrate advanced SQL skills by creating a database-driven analysis workflow and answering complex business questions through structured queries.
 
 #### Task 2.2.1: Database Design and Data Loading
@@ -334,6 +437,7 @@ Demonstrate advanced SQL skills by creating a database-driven analysis workflow 
 ## Section 3: Machine Learning
 
 ### Objectives
+
 Apply unsupervised machine learning techniques to discover hidden patterns in customer behavior and generate actionable business insights.
 
 ### Task 3.1: Customer Segmentation (Clustering)
@@ -415,6 +519,7 @@ Apply unsupervised machine learning techniques to discover hidden patterns in cu
 ## Section 4: Business Insights & Actions
 
 ### Objectives
+
 Translate analytical findings into actionable business strategies with quantified impact assessments.
 
 ### Task 4.1: Customer Insights and Value Optimization
@@ -517,6 +622,7 @@ Translate analytical findings into actionable business strategies with quantifie
 ## Section 7: FastAPI Deployment
 
 ### Objectives
+
 Deploy machine learning models and analysis insights through a production-ready REST API service that enables real-time predictions and business intelligence queries.
 
 ### Task 7.1: API Architecture and Model Serving
@@ -624,23 +730,27 @@ GET /api/v1/models/performance
 ## Section 6: Deliverables
 
 ### Technical Documentation
+
 - **Code Repository**: Clean, commented Python/R code with comprehensive documentation
 - **Data Pipeline**: Automated data processing and feature engineering scripts
 - **Model Documentation**: Detailed methodology, assumptions, and validation results
 - **Technical Appendix**: Statistical methods, parameter tuning, and model selection rationale
 
 ### Business Reports
+
 - **Executive Summary**: Key findings, recommendations, and expected ROI (5-10 pages)
 - **Detailed Analysis Report**: Comprehensive findings with supporting statistical evidence (20-30 pages)
 - **Implementation Roadmap**: Prioritized action items with timeline and resource requirements
 - **Dashboard User Guides**: Instructions for using interactive Excel and Power BI dashboards
 
 ### Interactive Tools
+
 - **Power BI Dashboard Suite**: Executive, customer, and product performance dashboards
 - **Excel Analysis Templates**: Reusable templates for ongoing business analysis
 - **Python/R Analysis Scripts**: Reproducible analysis workflows for future data
 
 ### Portfolio Assets
+
 - **Case Study Presentation**: Professional presentation for portfolio and interviews
 - **GitHub Repository**: Well-organized code with professional README and documentation
 - **Visual Story**: Infographic-style summary of key insights and methodologies used
@@ -648,6 +758,7 @@ GET /api/v1/models/performance
 ## Installation & Setup
 
 ### Prerequisites
+
 ```bash
 Python 3.8+
 pandas>=1.3.0
@@ -666,11 +777,13 @@ psycopg2-binary>=2.9.0
 ```
 
 ### Data Access
+
 1. Download dataset from Kaggle: "eCommerce behavior data from multi-category store"
 2. Place CSV files in `data/raw/` directory
 3. Run data validation script to confirm data integrity
 
 ### Environment Setup
+
 ```bash
 git clone https://github.com/yourusername/ecommerce-analysis
 cd ecommerce-analysis
