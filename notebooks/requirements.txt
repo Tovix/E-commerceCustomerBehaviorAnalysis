@@ -14,3 +14,4 @@ psycopg2-binary>=2.9.0
 dask>=2021.0.0
 pyarrow>=5.0.0
 polars>=0.20.0
+statsmodels>=0.13.0
