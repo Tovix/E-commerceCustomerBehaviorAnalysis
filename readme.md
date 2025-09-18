@@ -296,19 +296,15 @@ Transform raw, messy e-commerce data into analysis-ready format while handling d
 **Questions to Test**:
 
 1. **Customer Segmentation Hypotheses**
-   - Is there a statistically significant difference in average order value between mobile and desktop users?
-   - Do customers from different countries exhibit significantly different browsing patterns?
-   - What is the correlation between session length and likelihood of making a purchase?
+   - Does adding a product to the cart significantly increase the probability of purchase?
+   - What is the correlation between product price and the likelihood of being added to the cart?
+   - Does the time of day have a statistically significant effect on purchase probability?
 
 2. **Temporal Pattern Testing**
    - Is there a significant seasonal effect on purchasing behavior using ANOVA?
    - What statistical test can confirm if certain hours of the day have significantly higher conversion rates?
    - How do we test if promotional periods significantly impact customer behavior metrics?
 
-3. **Product Association Analysis**
-   - What is the statistical significance of observed product co-occurrence patterns?
-   - How do we test if certain brand combinations are viewed together more than random chance would suggest?
-   - What correlation exists between product price and the number of times it's viewed before purchase?
 
 ### 2.2 SQL Analysis
 
