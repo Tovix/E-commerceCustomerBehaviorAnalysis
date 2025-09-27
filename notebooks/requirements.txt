@@ -16,3 +16,5 @@ pyarrow>=5.0.0
 polars>=0.20.0
 statsmodels>=0.13.0
 scikit-posthocs>=0.7.0
+alembic>=1.7.0
+asyncpg>=0.24.0
