@@ -369,24 +369,6 @@ Demonstrate advanced SQL skills by creating a database-driven analysis workflow 
    - How can we calculate inventory turnover rates and reorder points using SQL analytics?
    - What query structure enables real-time dashboard metrics for business stakeholders?
 
-#### Task 2.2.4: Query Optimization and Performance
-
-**Questions to Address**:
-
-1. **Query Performance Analysis**
-   - How do we use EXPLAIN ANALYZE to identify bottlenecks in complex analytical queries?
-   - What indexing strategies optimize queries that join large tables with temporal filters?
-   - How can we rewrite correlated subqueries using window functions for better performance?
-
-2. **Scalable SQL Patterns**
-   - What techniques allow SQL queries to handle growing data volumes without performance degradation?
-   - How should we implement incremental processing for daily/monthly aggregations?
-   - What SQL patterns enable efficient processing of time-series data with gaps?
-
-3. **Database Maintenance and Monitoring**
-   - How do we implement SQL-based data quality checks and automated monitoring?
-   - What queries identify table and index usage patterns to optimize database performance?
-   - How can we use SQL to monitor query performance and identify optimization opportunities?
 
 ### 2.3 Excel Analysis
 
