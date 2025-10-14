@@ -1,7 +1,6 @@
 # E-commerce Customer Behavior Analysis
 
 ## Table of Contents
-
 - [Project Overview](#project-overview)
 - [Dataset Information](#dataset-information)
 - [Project Structure](#project-structure)
@@ -24,7 +23,6 @@
 TechMart is a growing e-commerce platform processing millions of transactions monthly with current annual revenue of $12 million. The company has experienced significant growth but lacks data-driven insights for strategic decision-making.
 
 ### Primary Business Objective
-
 **Target:** Increase annual revenue by 25% ($3M growth from $12M to $15M) within 12 months without proportionally increasing marketing spend.
 
 **Core Challenge:** Current customer acquisition cost has increased 40% while average order value remained flat, requiring optimization of existing customer base rather than expanded acquisition.
@@ -32,52 +30,43 @@ TechMart is a growing e-commerce platform processing millions of transactions mo
 ### Stakeholder Requirements & Priorities
 
 #### Priority 1: Identify "Golden Customers"
-
 **Business Need:** Understand who the most valuable customers are to focus marketing efforts effectively.
 
 **Specific Requirements:**
-
 - Customer segmentation based on profit contribution (not just revenue)
 - Customer Lifetime Value calculations for each segment
 - Characteristics and behavioral patterns of high-value customers
 - Targeting strategy for acquiring similar customers
 
 **Success Metrics:**
-
 - Identification of top 20% customers contributing 80% of profit
 - Clear customer segment profiles with actionable characteristics
 - ROI projections for targeted marketing campaigns
 
 #### Priority 2: Reduce Customer Churn ("Stop the Bleeding")
-
 **Business Need:** Address the issue of one-time buyers who never return to the platform.
 
 **Specific Requirements:**
-
 - Analysis of customer retention patterns by segment
 - Identification of "bargain hunters" vs "potential loyalists"
 - Category-specific retention strategies
 - Cost-effective retention recommendations
 
 **Success Metrics:**
-
 - Churn rate analysis by customer segment and product category
 - Clear strategy on which customers to invest in retaining vs letting go
 - ROI analysis of retention campaigns
 
 #### Priority 3: Maximize Transaction Value (Cross-selling)
-
 **Business Need:** Increase average order value through strategic product recommendations.
 
 **Specific Requirements:**
-
 - Product association analysis for cross-selling opportunities
 - Focus on high-margin accessory and ecosystem product recommendations
 - Implementation-ready recommendation rules
 - Revenue impact projections
 
 **Success Metrics:**
-
 - Potential revenue increase: $600K annually from optimized cross-selling
 - Accessory attachment rate improvements
 - Average order value increases by product category
@@ -85,19 +74,16 @@ TechMart is a growing e-commerce platform processing millions of transactions mo
 ### Project Timeline & Check-ins
 
 **Week 2 Check-in:**
-
 - Initial data exploration findings
 - Preliminary customer segment identification
 - Early insights on churn patterns and cross-selling opportunities
 
 **Week 4 Progress Review:**
-
 - Complete customer segmentation with CLV calculations
 - Detailed retention strategy recommendations
 - Cross-selling rules with revenue projections
 
 **Week 6 Business Case Presentation:**
-
 - Final recommendations with implementation roadmap
 - ROI projections and business impact analysis
 - Technical implementation requirements for marketing and development teams
@@ -119,15 +105,13 @@ This end-to-end data science project analyzes customer behavior patterns in a la
 ## Dataset Information
 
 **Primary Dataset**: E-commerce Events History Dataset
-
 - **Source**: Kaggle - "eCommerce behavior data from multi-category store"
-- **Direct Link**: <https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store>
+- **Direct Link**: https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store
 - **Size**: 285 million users' events (November 2019 - April 2020)
 - **Format**: Multiple CSV files with transaction-level behavioral data
 - **Data Volume**: Approximately 30GB of raw data across multiple monthly files
 
 ### Dataset Description
-
 This dataset contains e-commerce behavioral events from a large multi-category online store. The data represents user interactions including product views, cart additions, and purchases. Each row in the dataset represents a single user event (page view, add to cart, purchase) with associated metadata about the user, product, and session context.
 
 ### Column Descriptions
@@ -145,14 +129,12 @@ This dataset contains e-commerce behavioral events from a large multi-category o
 | `user_session` | String | Unique session identifier | a23f5204-c3a6-4b23-8d2c-b05b68e5dc4f |
 
 ### Data Quality Notes
-
 - **Missing Values**: Significant missing data in `category_code`, `brand`, and `user_session` fields
 - **Data Types**: Mixed categorical and numerical features requiring preprocessing
 - **Scale**: Large dataset requiring efficient processing techniques
 - **Time Span**: 6 months of data providing seasonal variation analysis opportunities
 
 **Dataset Characteristics**:
-
 - Real-world e-commerce transaction data
 - Multiple data quality issues (missing values, duplicates, inconsistencies)
 - Large volume suitable for big data processing techniques
@@ -208,7 +190,6 @@ ecommerce-analysis/
 ## Section 1: Data Cleaning & Wrangling
 
 ### Objectives
-
 Transform raw, messy e-commerce data into analysis-ready format while handling data quality issues and creating meaningful features.
 
 ### Task 1.1: Data Quality Assessment
@@ -296,9 +277,9 @@ Transform raw, messy e-commerce data into analysis-ready format while handling d
 **Questions to Test**:
 
 1. **Customer Segmentation Hypotheses**
-   - Does adding a product to the cart significantly increase the probability of purchase?
-   - What is the correlation between product price and the likelihood of being added to the cart?
-   - Does the time of day have a statistically significant effect on purchase probability?
+   - Is there a statistically significant difference in average order value between mobile and desktop users?
+   - Do customers from different countries exhibit significantly different browsing patterns?
+   - What is the correlation between session length and likelihood of making a purchase?
 
 2. **Temporal Pattern Testing**
    - Is there a significant seasonal effect on purchasing behavior using ANOVA?
@@ -309,7 +290,6 @@ Transform raw, messy e-commerce data into analysis-ready format while handling d
 ### 2.2 SQL Analysis
 
 #### Objectives
-
 Demonstrate advanced SQL skills by creating a database-driven analysis workflow and answering complex business questions through structured queries.
 
 #### Task 2.2.1: Database Design and Data Loading
@@ -370,52 +350,103 @@ Demonstrate advanced SQL skills by creating a database-driven analysis workflow 
    - What query structure enables real-time dashboard metrics for business stakeholders?
 
 
-### 2.3 Excel Analysis
+### 2.3 Power BI Analysis
 
-#### Task 2.3.1: Business Intelligence Dashboard Creation
+#### Objectives
+Create comprehensive, interactive business intelligence dashboards that provide stakeholders with actionable insights and enable data-driven decision-making across all organizational levels.
 
-**Questions for Analysis**:
+#### Task 2.3.1: Executive Summary Dashboard
 
-1. **Sales Performance Metrics**
-   - What is the month-over-month growth rate in total revenue and transaction volume?
-   - Which product categories show the highest seasonality index using Excel's seasonal decomposition?
-   - How do we calculate and visualize the customer retention rate over different time periods?
+**Core KPI Visualizations**:
 
-2. **Customer Value Analysis**
-   - What is the distribution of customer lifetime value, and how should we segment customers based on CLV quartiles?
-   - How can we use Excel to identify the top 20% of customers contributing to 80% of revenue?
-   - What trends exist in average order value when segmented by customer acquisition month?
+1. **Revenue Performance Card Visuals**
+   - How should we display current month revenue vs target with variance indicators?
+   - How can we visualize the daily revenue trend to identify sales performance fluctuations throughout the month?
+   - What proportion of purchases came from new vs returning customers during the month?
+   - How can we visualize the daily Average Order Value (AOV) trend to analyze purchasing behavior over time?
 
-3. **Operational Efficiency Metrics**
-   - What is the cart abandonment rate trend, and how does it correlate with site traffic volume?
-   - How do conversion rates vary by traffic source, and which sources provide the highest value customers?
-   - What is the relationship between product catalog size and overall conversion performance?
+2. **Revenue Trend Analysis**
+   - What area chart configuration best displays revenue breakdown by product category over time?
+   - How can we visualize daily revenue changes and identify which categories drive increases or decreases in sales?
+   - What combination chart effectively shows order volume and average order value trends together?
 
-### 2.4 Power BI Analysis
+3. **Customer Funnel Visualization**
+   - How should we design a funnel chart showing the conversion journey from view to purchase?
+   - What visualization shows drop-off rates at each stage of the customer journey?
+   - How can we create interactive filters to segment the conversion funnel by product category, brand, or customer behavior (e.g., weekend vs weekday sessions)?
+   - What metrics should accompany the funnel to show conversion rates and potential revenue recovery?
 
-#### Task 2.4.1: Interactive Dashboard Development
+#### Task 2.3.2: Customer Analytics Dashboard
 
-**Questions for Visualization**:
+**Customer Segmentation Visuals**:
 
-1. **Executive Summary Dashboard**
-   - How can we display real-time KPIs that automatically update with new data?
-   - What drill-down capabilities are needed to investigate revenue anomalies?
-   - How should we visualize the customer acquisition funnel with interactive filters?
+1. **Customer Value Distribution**
+   - How should we design a scatter plot showing customer recency vs frequency with size representing monetary value?
+   - What treemap visualization effectively displays customer segments by size and revenue contribution?
+   - How can we create a matrix visual showing customer segment characteristics side-by-side?
+   - What donut chart design shows the distribution of customers across RFM segments?
+   
+   
+2. **Churn Analysis Visuals**
+   - What heatmap visualization displays purchase frequency patterns by day of week and hour?
+   - How should we design gauges showing at-risk customer percentages by segment?
+   - What visualization displays time-to-churn distribution for different customer types?
+   - What matrix visual effectively compares churn indicators across customer segments?
 
-2. **Customer Behavior Analysis Dashboard**
-   - What geographic visualization best shows customer concentration and spending patterns?
-   - How can we create dynamic customer segmentation views that update based on selected criteria?
-   - What time-series visualizations effectively show customer lifecycle patterns?
+#### Task 2.3.3: Product Performance Dashboard
 
-3. **Product Performance Dashboard**
-   - How do we create comparative visualizations for product category performance across different metrics?
-   - What approach allows stakeholders to dynamically adjust the time period for product analysis?
-   - How can we visualize cross-category purchasing patterns in an intuitive way?
+**Product Analytics Visuals**:
+
+1. **Category Performance Overview**
+   - How should we design a clustered bar chart comparing revenue and conversion rate by category?
+   - How can we create a bubble chart showing category performance (revenue vs conversion effectiveness, with popularity as bubble size)?
+   - What ribbon chart effectively shows category ranking changes over time?
+
+2. **Product-Level Analysis**
+   - How can we create a decomposition tree showing factors influencing product performance?
+   - What design shows product view-to-purchase conversion rates with benchmark comparisons?
+
+
+#### Task 2.3.4: Dashboard Integration & Interactivity
+
+**Cross-Dashboard Functionality**:
+
+1. **Filter and Slicer Design**
+   - How should we implement a consistent date range slicer across all dashboard pages?
+   - What slicer hierarchy allows filtering by product category at multiple levels?
+   - How can we create a customer segment slicer that updates all relevant visuals?
+   - What bookmark functionality enables saving and sharing specific dashboard views?
+
+2. **Drill-Through Capabilities**
+   - How should we configure drill-through pages for detailed customer profile analysis?
+   - What drill-through design allows investigating specific product performance details?
+   - How can we implement drill-through for analyzing anomalies in revenue trends?
+   - What navigation structure enables seamless movement between summary and detail views?
+
+3. **Interactive Features**
+   - How should we implement tooltips showing additional context on hover?
+   - What cross-filtering logic ensures intuitive visual interactions?
+   - How can we create buttons for switching between different metric views?
+   - What conditional formatting rules highlight important trends or alerts automatically?
+
+
+#### Task 2.3.5: Dashboard Performance & Maintenance
+
+**Technical Implementation**:
+
+1. **Data Refresh Strategy**
+   - What aggregation strategies reduce query time while maintaining analytical accuracy?
+   - How can we implement row-level security for different stakeholder access levels?
+   - What monitoring should be in place to ensure data freshness and quality?
+
+2. **Performance Optimization**
+   - How should we optimize DAX measures for complex calculations without impacting load times?
+   - What visual count and complexity guidelines ensure responsive dashboard performance?
+
 
 ## Section 3: Machine Learning
 
 ### Objectives
-
 Apply unsupervised machine learning techniques to discover hidden patterns in customer behavior and generate actionable business insights.
 
 ### Task 3.1: Customer Segmentation (Clustering)
@@ -451,10 +482,6 @@ Apply unsupervised machine learning techniques to discover hidden patterns in cu
    - How do product associations differ across customer segments identified in the clustering analysis?
    - What temporal patterns exist in product associations (morning vs evening purchases)?
 
-3. **Business Impact Assessment**
-   - What is the potential revenue impact of implementing cross-selling recommendations based on discovered associations?
-   - Which product categories would benefit most from bundle pricing strategies?
-   - How can we measure the effectiveness of association rule-based recommendations?
 
 ### Task 3.3: Dimensionality Reduction and Pattern Discovery
 
@@ -497,7 +524,6 @@ Apply unsupervised machine learning techniques to discover hidden patterns in cu
 ## Section 4: Business Insights & Actions
 
 ### Objectives
-
 Translate analytical findings into actionable business strategies with quantified impact assessments.
 
 ### Task 4.1: Customer Insights and Value Optimization
@@ -600,7 +626,6 @@ Translate analytical findings into actionable business strategies with quantifie
 ## Section 7: FastAPI Deployment
 
 ### Objectives
-
 Deploy machine learning models and analysis insights through a production-ready REST API service that enables real-time predictions and business intelligence queries.
 
 ### Task 7.1: API Architecture and Model Serving
@@ -708,27 +733,23 @@ GET /api/v1/models/performance
 ## Section 6: Deliverables
 
 ### Technical Documentation
-
 - **Code Repository**: Clean, commented Python/R code with comprehensive documentation
 - **Data Pipeline**: Automated data processing and feature engineering scripts
 - **Model Documentation**: Detailed methodology, assumptions, and validation results
 - **Technical Appendix**: Statistical methods, parameter tuning, and model selection rationale
 
 ### Business Reports
-
 - **Executive Summary**: Key findings, recommendations, and expected ROI (5-10 pages)
 - **Detailed Analysis Report**: Comprehensive findings with supporting statistical evidence (20-30 pages)
 - **Implementation Roadmap**: Prioritized action items with timeline and resource requirements
 - **Dashboard User Guides**: Instructions for using interactive Excel and Power BI dashboards
 
 ### Interactive Tools
-
 - **Power BI Dashboard Suite**: Executive, customer, and product performance dashboards
 - **Excel Analysis Templates**: Reusable templates for ongoing business analysis
 - **Python/R Analysis Scripts**: Reproducible analysis workflows for future data
 
 ### Portfolio Assets
-
 - **Case Study Presentation**: Professional presentation for portfolio and interviews
 - **GitHub Repository**: Well-organized code with professional README and documentation
 - **Visual Story**: Infographic-style summary of key insights and methodologies used
@@ -736,7 +757,6 @@ GET /api/v1/models/performance
 ## Installation & Setup
 
 ### Prerequisites
-
 ```bash
 Python 3.8+
 pandas>=1.3.0
@@ -755,13 +775,11 @@ psycopg2-binary>=2.9.0
 ```
 
 ### Data Access
-
 1. Download dataset from Kaggle: "eCommerce behavior data from multi-category store"
 2. Place CSV files in `data/raw/` directory
 3. Run data validation script to confirm data integrity
 
 ### Environment Setup
-
 ```bash
 git clone https://github.com/yourusername/ecommerce-analysis
 cd ecommerce-analysis
