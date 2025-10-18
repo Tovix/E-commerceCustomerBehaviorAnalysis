@@ -468,58 +468,11 @@ Apply unsupervised machine learning techniques to discover hidden patterns in cu
    - How should marketing strategies differ for each customer segment based on their behavioral patterns?
    - What is the optimal product recommendation strategy for each customer cluster?
 
-### Task 3.2: Market Basket Analysis
-
-**Questions to Investigate**:
-
-1. **Association Rules Mining**
+4. **Association Rules Mining**
    - What are the strongest product associations with support > 0.01 and confidence > 0.5?
    - Which product combinations have the highest lift values, indicating genuine cross-selling opportunities?
    - How do seasonal factors affect the strength of product associations?
 
-2. **Advanced Pattern Discovery**
-   - What are the most frequent 3-item and 4-item product combinations purchased together?
-   - How do product associations differ across customer segments identified in the clustering analysis?
-   - What temporal patterns exist in product associations (morning vs evening purchases)?
-
-
-### Task 3.3: Dimensionality Reduction and Pattern Discovery
-
-**Questions to Explore**:
-
-1. **Principal Component Analysis (PCA)**
-   - What percentage of variance in customer behavior can be explained by the first 3 principal components?
-   - Which original features contribute most heavily to each principal component?
-   - How do customer segments appear when visualized in the reduced dimensional space?
-
-2. **Advanced Dimensionality Reduction**
-   - How does t-SNE visualization reveal hidden customer behavior patterns not apparent in PCA?
-   - What clustering structure emerges when applying UMAP to high-dimensional customer feature space?
-   - How do we interpret the neighborhood structures revealed by non-linear dimensionality reduction?
-
-3. **Pattern Validation**
-   - How consistent are the patterns discovered across different dimensionality reduction techniques?
-   - What business insights emerge from the low-dimensional representations of customer behavior?
-   - How can we validate that discovered patterns represent genuine behavioral differences rather than noise?
-
-### Task 3.4: Anomaly Detection
-
-**Questions to Address**:
-
-1. **Fraud and Abuse Detection**
-   - What customer behaviors indicate potential fraudulent activity using Isolation Forest?
-   - How do we distinguish between genuine high-value customers and potential data anomalies?
-   - What temporal patterns in user sessions suggest automated bot activity?
-
-2. **Business Anomaly Identification**
-   - Which products or categories exhibit unusual sales patterns that warrant investigation?
-   - How do we identify customers with abnormal purchasing patterns that might indicate data quality issues?
-   - What geographic or temporal anomalies exist in the transaction data?
-
-3. **Anomaly Impact Assessment**
-   - What percentage of revenue is associated with flagged anomalous transactions?
-   - How do business metrics change when anomalous data points are excluded from analysis?
-   - What operational processes should be implemented to handle identified anomalies?
 
 ## Section 4: Business Insights & Actions
 
